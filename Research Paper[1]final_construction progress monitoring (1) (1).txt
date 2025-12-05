@@ -1,0 +1,190 @@
+﻿Deep Learning based Real-time Construction Monitoring and Progress Tracking
+
+
+1st Gagana S R  
+School of Computer Science and Engineering
+Presidency University 
+Bengaluru, India gagana.20221ise0025@presidencyuniversity.in
+________________
+2nd Tanushree M S
+School of Computer Science and Engineering
+Presidency University
+Bengaluru, India
+tanushree.20221ise0021@presidencyuniversity.in
+4th Zafar Ali Khan N, Professor(HOD)
+School of Computer Science and Engineering 
+Presidency University 
+Bengaluru, India 
+zafaralikhan@presidencyuniversity.in 
+________________
+3rd Sneha Kumari
+School of Computer Science and Engineering
+Presidency University 
+Bengaluru, India 
+sneha.20221ise0042@presidencyuniversity.in
+________________
+
+
+Abstract— In contemporary construction works, timely completion, high quality adherence, and effective utilization of the finite resources has put a strong pressure on keen supervision of any construction project. Traditionally, the monitoring has been manual site check and subjective reporting methods, which have brought systemic inefficiencies that in most cases lead to quantifiable error and expensive project delays that undermine the productivity of the industry greatly. Nevertheless, the blistering and transformative progress in the domain of computer vision, image processing, and deep learning is in the offing, and will allow making this critical overseeing activity more permissive to permit project tracking in the form of images. Such evolution becomes the solution to the significant challenges, such as those connected with the character of unstructured site data and the necessity of scalable solutions.
+A systematic review of the body of research present on image-based monitoring will be undertaken in this paper through identifying and giving due credit to the existing methodologies and a comprehensive taxonomy on the techniques of image-based monitoring will be proposed with the aim of categorizing the image-based monitoring techniques. Moreover, a critical comparative analysis of the previous research is undertaken so as to explicitly describe the strong points, weak points and gaps that persist in the research (occlusions and handling of lighting variation) in the field. This assists in providing the sharp statement of the problem at the end of the paper: the innovative robust and real-time image-based systems that are practically integrated into active building construction projects in a seamless fashion to provide fast feedback, so that visibility of the progress is faster and much more economical and reliable to all the parties involved.
+Keywords— Construction Monitoring, Image Processing, Progress Tracking, Building Projects, Deep Learning,  Machine Learning.
+1. Introduction 
+One of the largest and the most resource-consuming industries in the world is the construction industry. It, thus, demands highly on the effective project monitoring to make work within schedule, budget and quality standards. The use of conventional approaches, such as field visits, subjective progress reports, and 2D drawings references, unfortunately, has grown to be less efficient, as most of the listed practices are most usually labour-intensive and infamously subject to human error.
+This negligence is currently evolving as a result of the technological transformation. The recent developments in digital technologies have made the use of images and video to monitor the construction process on an ongoing basis to be widespread. These visual techniques will help to obtain dense visual information, which can now be put through advanced computer vision techniques and deep learning algorithms at an unprecedented rate and quality. Automation of this nature of tracking progress, identifying differences, and objective assessment of the quality in near real time is optimistic that project control and reliability could be leaped by far.
+2. Related Works, Problem Statement  and Ease of Use
+   1. Related Works
+A sufficient body of literature has been generated to chronicle the evolution of the construction progress monitoring over the years to abandon and mechanize it using computer-based vision up to an advanced form. Golparvar-Fard and his co-authors were the first to suggest the digital turn in the late 2000s when they suggested the possibility of integrating 4D BIM with easily accessible visual data, including still images and time-lapse photography. It was a breakthrough since it allowed the systematic comparison of the as-planned schedule and as-built site conditions and provided credible and presentative information concerning the construction progress.
+Besides this initial success, work proceeded to more complex geometrical and spatial means. The works during this period were inclusive reviews such as that of Zheng et al. on photographic methods of reconstruction in 3D. They indicated that site pictures could produce accurate and dense point clouds and as-built 3D models of a site by photogrammetry and Structure-from-Motion. This was necessary as it would be required to pass beyond visual verification to more complex geometrical verification. Likewise, Ekanayake and Marasinghe performed a systematic literature review of the existing literature to summarize the state of research, and a change in the current research to deep learning and artificial intelligence was required to overcome the weaknesses of manually designed computer vision features.
+Further specialization studies have expanded the field. The visualization domain contributed to a more comprehensive vision of the stakeholders due to the overlay of the real-time information on the progress of the models by BIM. The use of Unmanned Aerial Vehicles had been previously studied by other researchers like Brilakis, Son and Kim and has the potential to integrate high-resolution aerial images with deep learning models in order to perform large scale surveillance of the sites as well as detecting the deviations, which is one of the most problematic areas in mega civil projects.
+Combined, the literature offers a clear development: a 2D analysis of still images has been substituted with a 3D/4D fusion, and then the automation is done by the AI. However, the key void in the study that remains to be bridged is the development of potent, generalized, and computationally efficient systems which can overcome such an enormous practical problem as model complexity, site variability, like lighting, dust, and occlusion, and high memory expense, so as to yield real time, stable feedback which can be actively incorporated in the daily practice of the project stakeholder. These are the key challenges that have been specifically taken care of in this paper.
+   2. Problem Statement 
+* Deep learning models that are being used in monitoring are complex. Although that will aid in learning the finer points about construction sites, it may complicate their decision-making, as well as make it difficult to identify or explain.
+* Reliability should be generalized in a number of construction sites which is difficult to do. Lighting, weather, quality of camera images, including drones, phones, or fixed cameras and conditions of the locale, such as dust or scaffolding, can affect the quality of the images and performance of the model.
+* The system should be in a position to identify and monitor with high precision various types of construction activities and/or components, e. e., foundation pouring, steel erection or wall framing to fully ascertain the project progress status.
+* Most of these models can be computationally intensive or can be huge in memory requirements, thus run on-site or on other less powerful computers can be challenging or impossible, thus real time monitoring is challenging.
+   1. Ease of Use
+1. Easy-to-understand Results: The system does not need managers to process raw computer vision data, but rather processes results in three key forms: Percentage of Completion, Deviation Alerts and Heatmaps of component status. This type of output is a direct replacement to manual reports which are subjective and time consuming.
+2. Real-time Performance: The efficient model architecture will utilize techniques like model quantization to execute the inference at the edge, i.e. on-site or a low-weight server. To guarantee this, the design has updated the progress and critical deviation alerts at very small latency to transform what used to be a weekly snapshot monitoring to live and continuous feedback.
+3. Smooth Interaction: Usability is applied to system integration. The last platform will be constructed to have an opportunity to communicate through a simple API with the existing BIM and scheduling software. This data flow will allow the manager to not be operating a new and stand-alone tool but have the AI-generated progress information flow automatically fill into their more familiar project control dashboards, making adoption faster and reducing the learning curve on-site.
+4. Reduced Human Intervention: Last but not least, the system will save workforce by being easy to use, as the system will automate the tasks that have the highest level of errors: visual confirmation, measurement, and generation of reports. By so doing, the personnel at the site have the capacity to use their expertise in problem-solving and quality control and not just data collection.
+
+
+3. Taxonomy of Image-Based Construction Progress Monitoring 
+      This has five classifications, based on the taxonomy of the construction progress monitoring methods that was developed upon the literature review.
+To begin with, there is 2D image analysis which identifies, categorizes and tracks the objects on job sites based on photographs and video streams. These are quite easy and practical methods but usually limited with respect to accuracy as well as scale.
+The second category of applications is the 3D reconstruction (photogrammetry and SfM) used in the generation of as-built three dimensional models. A model of this kind offers far more detailed descriptions of the project development, making detailed comparisons with specifications in design.
+The third type is the combination of 4D BIM where the time aspect has been incorporated in 3D models. These will allow the as-built progress comparisons against the project schedules to occur and in this way, a real-time tracking of activities either being on schedule or not.
+The fourth one is computer vision and AI methods based on deep learning of defect detection, construction material tracking, and high precision object recognition. These methods are all becoming popular due to their ability to learn on a large scale as time goes by.
+Last but not least is the UAV and remote sensing category whereby drones are used to capture images of the site in a bid to offer a comprehensive coverage of the site. This is highly effective when it comes to large-scale construction projects owing to the fact that the information is captured at angles and heights where it would be hard to capture using ground-based monitoring.
+Figure 1 below presents this taxonomy, and it is the scope of the entire spectrum of approaches, including the simplest visual inspection methods and sophisticated monitoring systems based on AI.
+
+
+  
+
+Fig 1. Unified Approach of Construction Monitoring
+   2. 2D Image Analysis
+As of today, even today, the image based methods of monitoring are actually the backbone of construction monitoring, consequently, most of the techniques today are based on a camera, which is easily available to obtain a visual data. These techniques are easily installed, inexpensive and can be used to perform continuous inspections. Such limitations of these techniques are however subject to the fact that they do not provide the depth information and will fail to comprehend space.
+1. Photos and video streams: Still photographs and video feeds are important bits of data utilized in 2D analysis. Cameras can also be strategically placed on the sites to make vital records such as materials delivery, or worker traffic and equipment utilization. These pictures of records will make sure that the interested parties keep track of the same in real time and create an indefinitely permanent record of the conditions of the site that they can trust at a later date. They are however highly sensitive to the camera position setup, resolution and light set up and a high level of accuracy.
+2. Object detection, classification, and tracking: The computer vision algorithms are used to automatically detect and classify 2D data, including workers, cranes or building part. Tracking the time variations of these objects will provide the sense of the work rate, the resources that are not used, and the tasks that are being performed. The use of excavators or installation of reinforcement steel is one example of this as a signifier of the stage of a particular construction. The possible problems which hamper the precision are the occlusion that is the obstructing of an object with another or the changing weather conditions.
+3. Sensory inspection: In the majority of cases, the managers examine pictures or videos to identify whether some activities like masonries work or installation of slabs have been done. These systems are able to detect visual clues in the form of wall height or availability of installed components automatically. The systems may be judged useful in some of the fast tests, however, because of their incapacity to certify that there are no geometric errors, or that they can detect latent problems, they cannot be applied to give quality assurance.
+   1.  3D Reconstruction
+In contrast to 2D techniques, 3D reconstruction takes into consideration the space depth that can be used to facilitate a more comprehensive and precise tracking of progress. The majority of these approaches involve more advanced sensors and handling capabilities, yet they will offer the results with additional data to evaluate.
+1. Photogrammetry and SfM: In photogrammetry, a 3D geology of an object can be built by means of a collection of 2D images of the object facing various focal points. Structure-from-Motion is an automatic process to locate the positions of the camera and object structure, which can be used to detail simple photographs much finer. This will be applicable in creating a 3D map of the construction site that is highly precise. These methods are applied in creating a topography model in the infrastructure construction like roads and bridges.
+2. As-built 3D models: The built up models are computer site twins depicting actual progress. The as-built models would be kept and can be reused at a later date to confirm the dimensions of structures, quality and verification of quality of construction. They are useful in situations where a large scale project is involved and manual measurements can be either cumbersome or even impossible.
+3. Project-state comparison: The line by line comparison between the as built 3D models with the as-designed BIM models help the project managers to detect some of the deviation including the incomplete jobs, misaligned installation or missing parts. In this case, as an illustration, the 3D comparisons will be used to identify the issues of misalignment in a column by several centimeters and will avoid costly redesigning on the part of the project managers.
+   1. 4D BIM Integration
+Time dimension-enhanced BIM or 4D as the term is also referred to is the procedure to position the timetable in the 3D project models to provide some robust graphics along with planning that could bind the real progression to the project schedules.
+1. Time related 3D models: Construction objects of 4D BIM are not only geometric models but also have a relationship with certain activities on the project schedule. This concept allows showing the sequence of construction over time and, therefore, it is a simulation virtually of the project development.
+2. Schedule-conscious as-planned comparison: The managers can identify the differences between the planned schedule and the actual schedule by overlaying the real progress data to 4D BIM models. The comparison will find out the delays or early finishes or out-of-sequence activities which directly affects the project control.
+3. Dynamic monitoring and forecasting: Predictive analytics can be established by way of incorporating time-related data. Taking the example of a delay being noted in some activities will automatically reassign the downstream activities and forecast the entire delay of the project. The proactive feature assists in the decision-making and resources distribution.
+   1. Computer Vision & AI Methods
+The recent advancement in AI and deep learning has transformed construction monitoring by automating recognition exercises that were previously to be performed manually. These methods work with a massive amount of image and video data with high accuracy to scalable solutions to large projects.
+1. Deep learning and defect detection: An AI-based model, like CNN, that is trained on a large dataset of construction images is capable of detecting any one of the numerous structural defects that may be cracks, spalling, and missing reinforcement, among other defects. This saves time and subjectivity of the visual inspection and, therefore, makes it safer and more reliable.
+2. Tracking of material and objects: AI-enabled systems monitor the location of building materials, such as steel bars, bricks or prefabricated parts or equipment flows through various process steps. Monitoring in every phase of the process will mean that the required material is available when needed to prevent any delay of the process by late delivery or lost materials. This further simplifies the inventory management processes.
+3. Learning by large data: AI algorithms enhance as they get exposed to a larger amount of data. Indicatively, an object detection model that is trained on world building data sets will be trained to identify different types of equipment in different projects. This scalability thus enables AI-based monitoring to be flexible to other construction settings.
+   1. UAV & Remote Sensing
+The remote sensing and Unmanned Aerial Vehicles have transformed the sphere of monitoring by providing aerial views and massive data gathering. These techniques contribute towards safety, efficiency as well as coverage.
+1. Drone imagery and site-wide aerial coverage: UAVs are capable of stitching images and videos which are of high resolution and will cover the entire construction site within minutes. This facilitates complete surveillance without necessarily taking time to go on the ground to inspect so as to save time and manpower.
+2. The large areas or inaccessible areas: Areas of the roofs on high rises, the spans of bridges, or the areas of danger can be inspected easily with the assistance of UAVs. This would not in any way necessitate scaffolding and manual checks in hazardous areas, which would increase the safety of the workers.
+3. Multi-angle inspection, integration with GIS: The data collected by the drones is combined with GIS to create detailed maps to perform the spatial analysis. The multi-angle images will help in the insight of the conditions of the structures that may not be apparent on the ground; therefore, monitoring of infrastructural complex structures by the UAV is very effective.
+4. Comparative Analysis
+Various algorithms are developed for classifying the construction activities over the multi-class to attain better performance of classification. The classification of multi-class construction activities is compared with the existing approaches for enhancing performance of the model. The comparative analysis is significant for analyzing in development and effective enhancement of the model’s performance. This comparative analysis comprises the employed methodologies, performance measures, advantages and limitations as represented in Table I.
+1. COMPARATIVE ANALYSIS OF VARIOUS CONSTRUCTION TECHNIQUES 
+Authors & Year
+	Paper Title
+	Methodology
+	Advantages
+	Limitations
+	Performance Measures
+	Golparvar-Fard, Pena-Mora & Arboleda (2012)
+	Construction performance monitoring via still images, time-lapse photos, and video streams: Now, tomorrow, and the future
+	Image-based surveillance solutions 
+	Low cost, easy to implement, enables 24/7 monitoring
+	Accuracy relies on camera position, lighting, and occlusions; limited scalability
+	Review of existing solutions, trend identification, and gap types
+	
+
+Zheng, Liu & Xu (2021)
+	
+
+	Review of Image-Based 3D Reconstruction of Building for Automated Construction Progress Monitoring
+	Photogrammetry & Structure-from-Motion (SfM)-based building 3D models
+	Accurate geometry, enables comparison between as-built and as-designed models
+	Computationally expensive, requires competent operation, and high-quality images
+	Accuracy of 3D reconstruction validated against reference building models
+	Ekanayake & Marasinghe (2022)
+	Automated Computer Vision-Based Construction Progress Monitoring: A Systematic Review
+	Surveillance of computer vision-based protocols 
+	Comprehensive analysis of modalities, scalability with massive datasets
+	Based on secondary information; little real-world confirmation analysis
+	Comparative performance summary among methods
+	Ekanayake & Marasinghe (2022)
+	Construction Progress Monitoring and Reporting using Computer Vision Techniques
+	Computer vision-based review of monitoring and reporting systems
+	Provides structured understanding of computer vision applications in reporting
+	More conceptual, limited evidence of field deployment
+	Evaluated through literature-based classification and framework analysis
+	Golparvar-Fard, Bohn & Pena-Mora (2009)
+	Visualization of Construction Progress Monitoring with 4D Simulation Model Overlaid on Time-Lapsed Photograph
+	4D BIM integration with time-lapse imagery
+	Enhances collaboration, schedule and visual monitoring, aids in control
+	High computational requirement; only demonstrated in case studies
+	Demonstrated improved schedule adherence and progress visualization in case studies
+	
+
+5. Results and Discussion
+The results of this study have actually provided significant milestones in the implementation of an image-based monitoring system that will simplify project progress reports to be stored, retrieved and manipulated particularly on remote locations where files are easily lost and unnecessary inspections are done. The system logs the site data in either drone, time-lapse or fixed cameras and ties all the progress data together under a single unique Work Package ID so that it forms a single reliable as-built history of the whole project.
+Image-based monitoring has become a disruptive technology in the construction sector as it has greatly decreased the use of manual inspections, and also made it possible to conduct real-time evaluation automatically. Actually, the extensive literature review revealed that this is a sphere of intensive development in every respect: 2D image analysis, 3D reconstruction, 4D BIM integration, and AI-based solutions make the monitoring of large-scale projects with the methods of UAVs possible. The reasoning of this technological change is that it is an efficient method of capturing and analyzing data on the site, simplifying the processes, minimizing human resources and making decisions about the data faster. Nevertheless, the study confirms that there still are unresolved issues and significant gaps in challenges-automation, accuracy concerns, data scalability, and integration challenges-that are highly significant underlying constraints to the broad-based industrial use of such systems. To circumvent them, the further study must be aimed at creating unified frameworks, efficient deep-learning architectures that can be applied to various site conditions, and smooth incorporations of image-based monitoring systems into the digital twin technologies. Only such concentrated studies can ensure that more industries make use of these technologies towards radical change in the efficiency, accuracy of the projects, and the final result of the projects.
+  
+
+Fig 2. Login to SiteSight AI
+
+
+This log-in screen offers secure, role-based authentication for construction staff, administration, and client stakeholders. It ensures that at each user level-for example, Site Manager, Project Engineer, and Client-access is granted only to their relevant dashboards, data analyses, and task permissions. Its simple design supports ease of navigation and reinforces data privacy and project security in the site-monitoring system (Fig 2).
+
+
+  
+
+
+
+Fig 3
+
+
+  
+
+
+
+Fig 4
+
+
+Above  two images shown, respectively, Fig. 3 and Fig. 4, the construction progress summary dashboard visualizing some key metrics: Overall Progress, Total Analyses, Safety Score, and Items Detected. This is very important to provide instant site activity overview and recommendations on performance to the project managers. It gives the project manager a clear view of construction status and possible deviations, enabling their ability to make decisions fast.
+6. Future work
+In the future, the successful implementation of this image monitoring system will serve as a prototype of the use of the sophisticated AI tools in the entire construction sector, such as quality control and automated logistics. The main concepts of this developed here unique digital identities assigned, smart AI analysis and cloud storage will help in managing these complicated projects in an easier and stronger way. In our case, the next steps in working on the system will be to make it more practical and integrated: it may be linked to live sensors and IoT equipment to provide real-time data, and we will also create simple AI assistants or chatbots to ask the field personnel about quick progress. This involves stringent methodological frameworks which revolve around long-term and real life case studies of various projects in order to prove the soundness and generalizability of the model under uncontrolled site factors. The supplier logistics and safety systems will be connected to the platform, and it will be enclosed in a holistic Digital Twin model. To achieve this, the research in the future must focus on standardizing data protocols to facilitate interoperability as well as investigate edge AI architectures in such a way that the real-time insights can be effectively processed and communicated locally throughout the system and transform project management and construction delivery on the global scale.
+
+
+References
+1. M. Golparvar-Fard, F. Pena-Mora, and C. A. Arboleda, “Construction performance monitoring via still images, time-lapse photos, and video streams: Now, tomorrow, and the future,” Automation in Construction, 2012. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S1474034615000233 Eason, B. Noble, and I. N. Sneddon, “On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,” Phil. Trans. Roy. Soc. London, vol. A247, pp. 529–551, April 1955. (references)
+2.  R. Zheng, J. Liu, and Y. Xu, “Review of Image-Based 3D Reconstruction of Building for Automated Construction Progress Monitoring,” Applied Sciences, 2021. [Online]. Available: https://www.mdpi.com/2076-3417/11/17/7840
+3. B. Ekanayake and L. S. Marasinghe, “Automated Computer Vision-Based Construction Progress Monitoring: A Systematic Review,” Buildings, 2022. [Online]. Available: https://www.mdpi.com/2075-5309/12/7/1037
+4. B. Ekanayake and L. S. Marasinghe, “Construction Progress Monitoring and Reporting using Computer Vision Techniques – A Review,” ISARC, 2022. [Online]. Available: https://www.iaarc.org/publications/fulltext/062_ISARC%202022_Paper_48.pdf
+5. M. Golparvar-Fard, S. Bohn, and F. Pena-Mora, “Visualization of Construction Progress Monitoring with 4D Simulation Model Overlaid on Time-Lapsed Photographs,” Journal of Computing in Civil Engineering, 2009. [Online]. Available: https://www.researchgate.net/publication/228662339
+6. Z. Jiang, “Automated Construction Progress Monitoring using Image Segmentation and Building Information Models,” Pennsylvania State Univ. Dissertation, 2023. [Online]. Available: https://etda.libraries.psu.edu/catalog/19715zpj5026
+7. W. Wei, et al., “Integrated vision-based automated progress monitoring of indoor construction using mask region-based convolutional neural networks and BIM,” Automation in Construction, 2022. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S092658052200200X
+8. A. Braun, et al., “BIM-based progress monitoring,” Automation in Construction, 2017. [Online]. Available: https://www.academia.edu/44587691/BIM_based_progress_monitoring
+9. C. C. Hsieh, et al., “Integration of Construction Progress Monitoring Results using AI Image Recognition from Multiple Cameras onto a BIM,” ISARC, 2024. [Online]. Available: https://www.iaarc.org/publications/2024_proceedings...
+10. A. S. Greeshma and R. B. Edayadiyil, “Computer Vision for Construction Progress Monitoring: A Real-Time Object Detection Approach,” arXiv preprint, 2023. [Online]. Available: https://www.researchgate.net/publication/374014867
+11.  A. S. Greeshma and R. B. Edayadiyil, “Automated progress monitoring of construction projects using Machine learning and image processing approach,” Materials Today: Proceedings, 2022. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S2214785322014602
+12. M. Bonyani and M. Soleymani, “Towards Improving Workers' Safety and Progress Monitoring of Construction Sites Through Construction Site Understanding,” arXiv preprint, 2022. [Online]. Available: https://arxiv.org/abs/2210.15760
+13. B. Ekanayake and L. S. Marasinghe, “Deep learning-based computer vision in project management: Automating indoor construction progress monitoring,” Project Leadership and Society, 2024. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2666721524000346
+14. A. Pal, J. J. Lin, S. H. Hsieh, and M. Golparvar-Fard, “Automated Vision-Based Construction Progress Monitoring in Built Environment through Digital Twin,” Developments in the Built Environment, vol. 16, Article 100247, 2023. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2666165923001291
+15. W. Jung and Y. Kang, “Automated progress measurement using a novel image recognition method for civil engineering applications,” Automation in Construction, 2014. [Online]. Available: https://www.academia.edu/17128808
+16. S. Yoon, et al., “Time-Series Image-Based Automated Monitoring of Temporary Structures in Construction,” Sensors, 2025. [Online]. Available: https://www.mdpi.com/1424-8220/25/2/574
+17. H. Kim, et al., “Construction progress monitoring based on thermal-image analysis,” Automation in Construction, 2017. [Online]. Available: https://www.researchgate.net/publication/319900597
+18. B. Ekanayake, et al., “Deep Learning-Based Computer Vision in Project Management,” Automation in Construction, 2024. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2666721524000346
+19. J. Y. Han, et al., “Automated Progress Monitoring of Land Development Projects Using UAV Images and Machine Learning,” Automation in Construction, 2024. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S0926580524005636
+20. M. Golparvar-Fard, “Automated Progress Monitoring Using Unordered Daily Construction Images and BIM,” Journal of Construction Engineering and Management, 2015. [Online]. Available: https://ascelibrary.org/doi/abs/10.1061/(ASCE)CP.1943-5487.0000205
+21. V. K. Reja, et al., “Computer Vision-Based Construction Progress Monitoring,” Automation in Construction, 2022. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S0926580522001182
+22. M. Golparvar-Fard and F. Peña-Mora, “Visualization of Construction Progress Monitoring with 4D Simulation Model Overlaid on Time-Lapsed Photographs,” Journal of Computing in Civil Engineering, vol. 23, 2009. [Online]. Available: https://www.researchgate.net/publication/228662339
+23. A. B. Ersoz, “Demystifying the Potential of ChatGPT-4 Vision for Construction Progress Monitoring,” arXiv preprint, 2024. [Online]. Available: https://arxiv.org/abs/2412.16108
+24. K. Karsch, et al., “ConstructAide: Analyzing and Visualizing Construction Sites through Photographs and Building Models,” ACM Transactions on Graphics (TOG), vol. 33, 2019. [Online]. Available: https://arxiv.org/abs/1912.11567
+[25]   S. R. S. Vasanthawada, et al., “Enhancing Construction Site Analysis and Understanding with 3D Segmentation,” arXiv preprint, 2025. [Online]. Available: https://arxiv.org/abs/2508.05922.
